@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1ai-os-jfh">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Categories-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CategoryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOf-VS-hd4">
+                                <rect key="frame" x="20" y="124" width="280" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="JdX-rv-jXB"/>
+                                </constraints>
+                                <state key="normal" title="Sports"/>
+                                <connections>
+                                    <action selector="findResults:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zqd-Uh-sr5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OjH-SL-lRK">
+                                <rect key="frame" x="20" y="200" width="280" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="dhG-XB-0YN"/>
+                                </constraints>
+                                <state key="normal" title="Action"/>
+                                <connections>
+                                    <action selector="findResults:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W3m-lI-eXv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zkk-Zt-RfZ">
+                                <rect key="frame" x="20" y="95" width="280" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="GUp-E2-cww"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lj0-h8-UrG">
+                                <rect key="frame" x="20" y="162" width="280" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="JaR-J4-t9P"/>
+                                </constraints>
+                                <state key="normal" title="Comedy"/>
+                                <connections>
+                                    <action selector="findResults:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XCg-zZ-3Zr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kOf-VS-hd4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="F1v-Wa-B2y"/>
+                            <constraint firstItem="lj0-h8-UrG" firstAttribute="top" secondItem="kOf-VS-hd4" secondAttribute="bottom" constant="8" id="NhF-Xg-bRO"/>
+                            <constraint firstItem="OjH-SL-lRK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VOE-Ac-x0Z"/>
+                            <constraint firstItem="Zkk-Zt-RfZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YQX-jA-j2p"/>
+                            <constraint firstItem="OjH-SL-lRK" firstAttribute="top" secondItem="lj0-h8-UrG" secondAttribute="bottom" constant="8" id="b6z-XF-lx1"/>
+                            <constraint firstItem="kOf-VS-hd4" firstAttribute="top" secondItem="Zkk-Zt-RfZ" secondAttribute="bottom" constant="8" id="ljk-21-DZI"/>
+                            <constraint firstItem="lj0-h8-UrG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="slV-n5-Zpb"/>
+                            <constraint firstItem="Zkk-Zt-RfZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="31" id="tCR-T7-8d2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Categories" id="f6h-Yj-b4h">
+                        <barButtonItem key="rightBarButtonItem" systemItem="organize" id="eu2-hZ-ZdU">
+                            <connections>
+                                <action selector="goToLibrary:" destination="BYZ-38-t0r" id="tWB-q6-5Kt"/>
+                                <segue destination="gyD-eO-xz6" kind="show" identifier="goToLibrary" id="g7P-2z-ZM2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="XKA-f7-Miu" kind="show" identifier="showResults" id="H2d-T7-tC7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="654" y="-377"/>
+        </scene>
+        <!--Results Table View Controller-->
+        <scene sceneID="zXv-lW-mHX">
+            <objects>
+                <tableViewController id="XKA-f7-Miu" customClass="ResultsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="K1K-o8-TIV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="XKA-f7-Miu" id="mWL-Hu-ygo"/>
+                            <outlet property="delegate" destination="XKA-f7-Miu" id="EMh-be-nzi"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="8uN-mk-wJ8" kind="show" identifier="showVideo" id="dO0-jj-rjd"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D4i-Gs-wez" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1148" y="-377"/>
+        </scene>
+        <!--Playing-->
+        <scene sceneID="Oo6-Gk-Edv">
+            <objects>
+                <viewController id="8uN-mk-wJ8" customClass="VideoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CdJ-Wj-V2y"/>
+                        <viewControllerLayoutGuide type="bottom" id="WXn-vQ-yFD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vzb-OK-7Mx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Playing" id="x38-97-6DE">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="xvJ-SL-UGy">
+                            <connections>
+                                <action selector="saveVideo:" destination="8uN-mk-wJ8" id="Wek-Zj-5nr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="gyD-eO-xz6" kind="show" identifier="showLibrary" id="Q22-rb-3vp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M0Z-3c-DMZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1593" y="-377"/>
+        </scene>
+        <!--Library-->
+        <scene sceneID="Vxo-e0-DjU">
+            <objects>
+                <collectionViewController id="gyD-eO-xz6" customClass="LibraryCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="W3O-zz-6CV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gdm-Ef-Duj">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="gyD-eO-xz6" id="vOK-wt-9gA"/>
+                            <outlet property="delegate" destination="gyD-eO-xz6" id="H65-Q6-691"/>
+                        </connections>
+                    </collectionView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Library" id="h4H-az-A3A">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="coA-nU-WMb">
+                            <connections>
+                                <action selector="goToHome:" destination="gyD-eO-xz6" id="pxc-c2-Rdh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hFG-So-u7l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1148" y="285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Q8i-p9-Qax">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1ai-os-jfh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WGP-Rj-bX0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ZPk-Dw-GdR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ojo-Wb-JXF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="251" y="-377"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="g7P-2z-ZM2"/>
+    </inferredMetricsTieBreakers>
+</document>
